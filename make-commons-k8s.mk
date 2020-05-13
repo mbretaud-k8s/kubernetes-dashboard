@@ -85,31 +85,31 @@ describe:
 ###############################################
 get:
 	@echo "---------------------------"
-	kubectl get namespace/$(namespaceName)
+	kubectl get namespace/$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get serviceaccount/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get serviceaccount/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get service/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get service/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get secret/kubernetes-dashboard-certs --namespace=$(namespaceName)
+	kubectl get secret/kubernetes-dashboard-certs --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get secret/kubernetes-dashboard-csrf --namespace=$(namespaceName)
+	kubectl get secret/kubernetes-dashboard-csrf --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get secret/kubernetes-dashboard-key-holder --namespace=$(namespaceName)
+	kubectl get secret/kubernetes-dashboard-key-holder --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get configmap/kubernetes-dashboard-settings --namespace=$(namespaceName)
+	kubectl get configmap/kubernetes-dashboard-settings --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get role.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get role.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get deployment.apps/kubernetes-dashboard --namespace=$(namespaceName)
+	kubectl get deployment.apps/kubernetes-dashboard --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get service/dashboard-metrics-scraper --namespace=$(namespaceName)
+	kubectl get service/dashboard-metrics-scraper --namespace=$(namespaceName) --ignore-not-found
 	@echo ""
-	kubectl get deployment.apps/dashboard-metrics-scraper --namespace=$(namespaceName)
+	kubectl get deployment.apps/dashboard-metrics-scraper --namespace=$(namespaceName) --ignore-not-found
 	@echo "---------------------------"
